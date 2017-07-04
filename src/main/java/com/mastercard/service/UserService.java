@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class UserService {
     private HashMap<Long, User> users = new HashMap<>();
     private static UserService userService;
-    private Long id = 0l;
+    private Long id = 1l;
 
     public static UserService getInstance() {
         if (userService == null)
@@ -36,11 +36,8 @@ public class UserService {
         return t;
     }
 
-    public void removeUser(Tweet t) {
-        if (t.getId() == null)
-            return;
-
-        users.remove(t.getId());
+    public void removeUser(Long id) {
+        users.remove(id);
     }
 
     public User getUser(Long id) {

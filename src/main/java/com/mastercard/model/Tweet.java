@@ -9,6 +9,26 @@ public class Tweet {
     String text;
     Long id;
 
+    public Tweet(String text, Long id, Long userId, Date createdAt) {
+        this.text = text;
+        this.id = id;
+        this.userId = userId;
+        this.createdAt = createdAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Tweet{" +
+                "text='" + text + '\'' +
+                ", id=" + id +
+                ", userId=" + userId +
+                ", createdAt=" + createdAt +
+                '}';
+    }
+
+    public Tweet() {
+    }
+
     public Long getId() {
         return id;
     }

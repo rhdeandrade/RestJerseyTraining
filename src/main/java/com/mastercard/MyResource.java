@@ -1,6 +1,9 @@
 package com.mastercard;
 
+import com.mastercard.model.Tweet;
 import com.mastercard.model.User;
+import com.mastercard.service.TweetService;
+import com.mastercard.service.UserService;
 import org.omg.PortableInterceptor.USER_EXCEPTION;
 
 import javax.ws.rs.*;
@@ -27,5 +30,5 @@ public class MyResource {
     public String getIt() {
         return "Got it!";
     }
-
+    
 }

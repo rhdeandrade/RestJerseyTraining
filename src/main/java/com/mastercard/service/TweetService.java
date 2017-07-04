@@ -11,7 +11,7 @@ import java.util.List;
 public class TweetService {
     private HashMap<Long, Tweet> tweets = new HashMap<>();
     private static TweetService tweetService;
-    private Long id = 0l;
+    private Long id = 1l;
 
     public static TweetService getInstance() {
         if (tweetService == null)
@@ -36,11 +36,8 @@ public class TweetService {
         return t;
     }
 
-    public void removeTweet(Tweet t) {
-        if (t.getId() == null)
-            return;
-
-        tweets.remove(t.getId());
+    public void removeTweet(Long id) {
+        tweets.remove(id);
     }
 
     public Tweet getTweet(Long id) {
